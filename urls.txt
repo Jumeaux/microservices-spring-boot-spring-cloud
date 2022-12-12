@@ -1,0 +1,6 @@
+currency Exchange Service
+http://localhost:8000/currency-exchange/from/USD/to/GNF
+
+currency Conversion Service
+http://localhost:8100/currency-conversion/from/USD/to/GNF/quantity/10
+
