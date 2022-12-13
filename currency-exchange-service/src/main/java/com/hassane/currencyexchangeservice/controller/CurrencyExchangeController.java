@@ -9,18 +9,26 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hassane.currencyexchangeservice.domain.CurrencyExchange;
+import com.hassane.currencyexchangeservice.repository.CurrencyExchangeRepository;
 
 @RestController
 public class CurrencyExchangeController {
 
 
     @Autowired
-    Environment environment;
+   private Environment environment;
+
+    @Autowired
+   private CurrencyExchangeRepository currencyExchangeRepository;
 
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
     public CurrencyExchange retrieveExchangeValue(@PathVariable(value = "from") String from, @PathVariable(value = "to") String to ){
-        CurrencyExchange currencyExchange= new CurrencyExchange(100L, from, to, BigDecimal.valueOf(50f));
+       // CurrencyExchange currencyExchange= new CurrencyExchange(100L, from, to, BigDecimal.valueOf(50f));
+        CurrencyExchange currencyExchange=currencyExchangeRepository.findByFromAndTo(from, to);
 
+        if (currencyExchange==null) {
+            throw new RuntimeException("Unable to find data for "+ from + " to "+ to); 
+        }
         currencyExchange.setEnv(environment.getProperty("local.server.port"));
 
         return currencyExchange;
