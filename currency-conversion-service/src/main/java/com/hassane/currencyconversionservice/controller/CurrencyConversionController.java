@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.hassane.currencyconversionservice.domain.CurrencyConversion;
 import com.hassane.currencyconversionservice.proxy.CurrencyExchangeProxy;
 
+
 @RestController
 public class CurrencyConversionController {
 

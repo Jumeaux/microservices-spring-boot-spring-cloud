@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.hassane.currencyconversionservice.domain.CurrencyConversion;
 
 
-@FeignClient(name = "currency-exchange",url = "http://localhost:8000")
+// @FeignClient(name = "currency-exchange",url = "http://localhost:8000")
+@FeignClient(name = "currency-exchange")
 public interface CurrencyExchangeProxy {
     
     @GetMapping(value="/currency-exchange/from/{from}/to/{to}")

@@ -6,10 +6,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ApiGatewayApplication",
+            "request": "launch",
+            "mainClass": "com.hassane.apigateway.ApiGatewayApplication"
+        },
+        {
+            "type": "java",
             "name": "Launch CurrencyConversionServiceApplication",
             "request": "launch",
-            "mainClass": "com.hassane.currencyconversionservice.CurrencyConversionServiceApplication",
-            "projectName": "currency-conversion-service"
+            "mainClass": "com.hassane.currencyconversionservice.CurrencyConversionServiceApplication"
+        },
+        {
+            "type": "java",
+            "name": "Launch NamingServerApplication",
+            "request": "launch",
+            "mainClass": "com.hassane.namingserver.NamingServerApplication"
         },
         {
             "type": "java",
