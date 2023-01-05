@@ -33,7 +33,9 @@ public class LimitsController {
     @GetMapping("/limits")
     public  Limits retriveLimits(){
         return new Limits( min,max,minimun,maximum);
+
         // return new Limits(configuration.getMinimun(),configuration.getMaximum());
+        
         // return new Limits(20,45);
     }
     

@@ -1,6 +1,33 @@
+Config server
+
+Eureka server
+http://localhost:8761
+
+limits Service
+http://localhost:8888/limits-service/dev   http://localhost:8888/limits-service/qa  http://localhost:8888/limits-service/dev
+
+
 currency Exchange Service
 http://localhost:8000/currency-exchange/from/USD/to/GNF
 
 currency Conversion Service
 http://localhost:8100/currency-conversion/from/USD/to/GNF/quantity/10
+
+http://localhost:8100/currency-conversion-feign/from/USD/to/GNF/quantity/6
+
+
+
+
+API gateway
+http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/GNF
+
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/GNF/quantity/7
+
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/GNF/quantity/5
+
+API gateway customise url
+http://localhost:8765/currency-exchange/from/USD/to/GNF
+http://localhost:8765/currency-conversion/from/USD/to/GNF/quantity/4
+
+
 
