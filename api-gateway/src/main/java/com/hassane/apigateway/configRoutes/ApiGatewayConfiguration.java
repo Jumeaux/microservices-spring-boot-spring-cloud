@@ -39,7 +39,7 @@ public class ApiGatewayConfiguration {
                         .route(p->p
                             .path("/publicCountries/**")
                             .filters(f->f
-                                .addRequestHeader("X-RapidAPI-Key", "c7fdb6cc58mshe4ed23b971bde8dp1012e3jsn3ff24fd97db4")
+                                .addRequestHeader("X-RapidAPI-Key", "x")
                                 .addRequestHeader("X-RapidAPI-Host", "countries-cities.p.rapidapi.com"))
                                     
                             .uri("https://countries-cities.p.rapidapi.com")
@@ -47,7 +47,7 @@ public class ApiGatewayConfiguration {
                         .route(p->p
                             .path("/muslim/**")
                             .filters(f->f
-                                .addRequestHeader("X-RapidAPI-Key", "c7fdb6cc58mshe4ed23b971bde8dp1012e3jsn3ff24fd97db4")
+                                .addRequestHeader("X-RapidAPI-Key", "x")
                                 .addRequestHeader("X-RapidAPI-Host", "muslimsalat.p.rapidapi.com")
                                   
                         )
