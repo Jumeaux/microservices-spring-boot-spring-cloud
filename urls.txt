@@ -4,7 +4,11 @@ Eureka server
 http://localhost:8761
 
 limits Service
-http://localhost:8888/limits-service/dev   http://localhost:8888/limits-service/qa  http://localhost:8888/limits-service/dev
+http://localhost:8888/limits-service/dev  
+ http://localhost:8888/limits-service/qa  
+ http://localhost:8888/limits-service/dev
+
+curl -X POST http://localhost:8080/actuator/refresh
 
 
 currency Exchange Service
@@ -29,5 +33,9 @@ API gateway customise url
 http://localhost:8765/currency-exchange/from/USD/to/GNF
 http://localhost:8765/currency-conversion/from/USD/to/GNF/quantity/4
 
+
+
+
+./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
 
 
